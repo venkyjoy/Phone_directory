@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone Directory Management</title>
+</head>
+<body>
+<div align = "center">
+    <h1>Phone_Directory</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>State</th>
+            <th>Phonenumber</th>
+
+        </tr>
+        </thead>
+        <tr th:each="phone: ${phonedirectory}" >
+            <td th:text = "${phone.Firstname}"></td>
+            <td th:text = "${phone.Lastname}"></td>
+            <td th:text = "${phone.State}"></td>
+            <td th:text = "${phone.Phonenumber}"></td>
+
+
+        </tr>
+
+
+
+    </table>
+</div>
+</body>
+</html>
