@@ -1,5 +1,7 @@
 package com.example.phone_directory.model;
 
+import jdk.jfr.DataAmount;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,13 +13,16 @@ public class Phonemodel {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+
+
     private int  id;
 
-
-
     private  String Firstname;
+
     private  String Lastname;
+
     private  String State;
+
     private  String Phone;
 
     public  Phonemodel(){
@@ -30,6 +35,10 @@ public class Phonemodel {
         Lastname = lastname;
         State = state;
         Phone = phone;
+    }
+
+    public Phonemodel(String s, String s1) {
+
     }
 
     public int getId() {

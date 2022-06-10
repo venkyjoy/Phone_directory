@@ -6,5 +6,9 @@ import java.util.List;
 
 public interface Phoneservice {
 
-    List<Phonemodel> listALL();
+
+    List<Phonemodel> getAllPhone();
+
+    List<Phonemodel> listAll(String keyword);
 }
+

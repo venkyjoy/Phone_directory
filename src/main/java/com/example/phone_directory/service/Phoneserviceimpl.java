@@ -16,6 +16,7 @@ public class Phoneserviceimpl implements Phoneservice {
     @Autowired
     private Phonerepository phonerepository;
 
+
     String line = "";
     public void savePhoneData(){
         try {
@@ -35,14 +36,23 @@ public class Phoneserviceimpl implements Phoneservice {
             e.printStackTrace();
         }
 
-
-
     }
+
+
     @Override
-    public  List<Phonemodel> listALL() {
+    public  List<Phonemodel> getAllPhone() {
         return phonerepository.findAll();
 
     }
+
+    @Override
+    public List<Phonemodel> listAll(String keyword) {
+        if (keyword != null) {
+            return phonerepository.search(keyword);
+        }
+        return phonerepository.findAll();
+    }
+
 
 
 }
